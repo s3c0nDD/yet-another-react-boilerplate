@@ -5,7 +5,9 @@
   "license": "MIT",
   "author": "s3c0nDD (https://github.com/s3c0nDD)",
   "dependencies": {
+    "bootstrap": "3",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
