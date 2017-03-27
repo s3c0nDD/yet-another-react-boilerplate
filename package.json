@@ -4,6 +4,7 @@
   "private": true,
   "license": "MIT",
   "author": "s3c0nDD (https://github.com/s3c0nDD)",
+  "repository": "s3c0nDD/yet-another-react-boilerplate",
   "dependencies": {
     "bootstrap": "3",
     "react": "^15.4.2",
