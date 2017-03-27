@@ -10,12 +10,15 @@ yarn start
 
 or `yarn build` in case you want to build app.
 
-### Things which was added by me:
+### Things added or integrated by me:
 1. Sass instead of CSS
 2. Bootstrap 3 + [React Boostrap](https://react-bootstrap.github.io)
-3. to be continued
-<br><br><br><br>
+3. [React Router v4](https://reacttraining.com/react-router/web/guides/quick-start)
+4. Router and React Bootstrap integration: [react-router-bootstrap](https://github.com/react-bootstrap/react-router-bootstrap)
+4. to be continued...
 
+
+<br><br><br><br>
 
 
 Original README made by Create React App:
@@ -143,14 +146,14 @@ my-app/
     App.js
     App.test.js
     index.css
-    index.js
+    Home.js
     logo.svg
 ```
 
 For the project to build, **these files must exist with exact filenames**:
 
 * `public/index.html` is the page template;
-* `src/index.js` is the JavaScript entry point.
+* `src/Home.js` is the JavaScript entry point.
 
 You can delete or rename the other files.
 
@@ -400,7 +403,7 @@ class Button extends Component {
 
 In development, expressing dependencies this way allows your styles to be reloaded on the fly as you edit them. In production, all CSS files will be concatenated into a single minified `.css` file in the build output.
 
-If you are concerned about using Webpack-specific semantics, you can put all your CSS right into `src/index.css`. It would still be imported from `src/index.js`, but you could always remove that import if you later migrate to a different build tool.
+If you are concerned about using Webpack-specific semantics, you can put all your CSS right into `src/index.css`. It would still be imported from `src/Home.js`, but you could always remove that import if you later migrate to a different build tool.
 
 ## Post-Processing CSS
 
@@ -618,7 +621,7 @@ npm install react-bootstrap --save
 npm install bootstrap@3 --save
 ```
 
-Import Bootstrap CSS and optionally Bootstrap theme CSS in the beginning of your ```src/index.js``` file:
+Import Bootstrap CSS and optionally Bootstrap theme CSS in the beginning of your ```src/Home.js``` file:
 
 ```js
 import 'bootstrap/dist/css/bootstrap.css';
@@ -1000,7 +1003,7 @@ npm install --save-dev enzyme react-addons-test-utils
 ```js
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import App from Routes;
 
 it('renders without crashing', () => {
   shallow(<App />);
@@ -1599,7 +1602,7 @@ When you save a file while `npm start` is running, the browser should refresh wi
 If this doesn’t happen, try one of the following workarounds:
 
 * If your project is in a Dropbox folder, try moving it out.
-* If the watcher doesn’t see a file called `index.js` and you’re referencing it by the folder name, you [need to restart the watcher](https://github.com/facebookincubator/create-react-app/issues/1164) due to a Webpack bug.
+* If the watcher doesn’t see a file called `Home.js` and you’re referencing it by the folder name, you [need to restart the watcher](https://github.com/facebookincubator/create-react-app/issues/1164) due to a Webpack bug.
 * Some editors like Vim and IntelliJ have a “safe write” feature that currently breaks the watcher. You will need to disable it. Follow the instructions in [“Working with editors supporting safe write”](https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write).
 * If your project path contains parentheses, try moving the project to a path without them. This is caused by a [Webpack watcher bug](https://github.com/webpack/watchpack/issues/42).
 * On Linux and macOS, you might need to [tweak system settings](https://webpack.github.io/docs/troubleshooting.html#not-enough-watchers) to allow more watchers.
