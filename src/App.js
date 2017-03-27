@@ -1,44 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
 
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+const Home = (props) => {
+  console.log(props);
+  return <h1>Home</h1>;
+};
 
-class App extends Component {
-  render() {
-    const pStyle = {
-        textAlign: 'center'
-    };
-    return (
-        <div>
-            <Navbar inverse fixedTop>
-                <Grid>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a href="/">React App</a>
-                        </Navbar.Brand>
-                        <Navbar.Toggle />
-                    </Navbar.Header>
-                </Grid>
-            </Navbar>
-            <Jumbotron>
-                <Grid>
-                    <h1>Welcome to React</h1>
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p style={pStyle}>
-                        <Button
-                            bsStyle="success"
-                            bsSize="large"
-                            href="http://react-bootstrap.github.io/components.html"
-                            target="_blank">
-                            View React Bootstrap Docs
-                        </Button>
-                    </p>
-                </Grid>
-            </Jumbotron>
-        </div>
-    );
-  }
-}
+
+const App = () => (
+  <Router>
+    <div>
+      <Route exact path="/" component={Home}/>
+      {/*<Route path="/about" render={() => <h1>About</h1>}/>*/}
+      <Route
+        path="/about"
+        children={({match}) => match && <h1>About</h1>}/>
+    </div>
+  </Router>
+);
 
 export default App;
