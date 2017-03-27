@@ -1,0 +1,15 @@
+nav {
+  padding: 10px 0 10px 0;
+  background-color: lightgray;
+
+  a, a.visited {
+    margin: 30px;
+    color: #337ab7;
+
+    &.active {
+      color: red;
+    }
+
+  }
+
+}
